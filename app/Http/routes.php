@@ -11,15 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dynamic/index');
-});
-Route::get('login/index',function(){
-	return view('login');
-});
-Route::get('login/register',function(){
-	return view('register');
-});
+//Route::get('/', 'Client\IndexController@index');
+
+Route::get('/', 'Client\IndexController@index');
+
+Route::get('login/index','User\LoginController@index');
+Route::get('login/register','User\RegisterController@index');
+Route::post('user/increase','User\RegisterController@increase');
 
 Route::get('dynamic/index',function(){
 	return view('dynamic/index');
@@ -29,9 +27,7 @@ Route::get('nearby/index', function () {
     return view('nearby/index');
 });
 
-Route::get('record/index', function () {
-    return view('record/index');
-});
+Route::get('record/index','Client\RecordController@index');
 
 Route::get('find/index', function () {
     return view('find/index');

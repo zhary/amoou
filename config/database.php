@@ -54,10 +54,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'amoou'),
-            'username'  => env('DB_USERNAME', 'root'),
-            'password'  => env('DB_PASSWORD', 'root'),
+            'host'      => 'localhost',//env('DB_HOST', 'localhost'),
+            'database'  => 'amoou',//env('DB_DATABASE', 'amoou'),
+            'username'  => 'root',//env('DB_USERNAME', 'root'),
+            'password'  => 'root',//env('DB_PASSWORD', 'root'),
             'charset'   => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix'    => 'amu_',
